@@ -15,6 +15,7 @@ html{
     padding: 3vh;
     position:fixed;
     z-index:999;
+    width:100%;
 }
 .navbar ul {
     list-style-type: none; 
@@ -22,6 +23,10 @@ html{
     margin: 0;
     display: flex;
     gap: 20px; 
+    padding-right: 4vw;
+}
+.navbar ul li{
+    margin: 1vw;
 }
 
 .navbar h1 {
