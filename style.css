@@ -4,6 +4,7 @@
     background-color: #0f0b0b;
     color: white;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -12,6 +13,8 @@ html{
     align-items: center;
     justify-content: space-between;
     padding: 3vh;
+    position:fixed;
+    z-index:999;
 }
 .navbar ul {
     list-style-type: none; 
