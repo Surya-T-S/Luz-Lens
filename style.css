@@ -5,11 +5,16 @@
     color: white;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 3vh;
+    position:fixed;
+    z-index:999;
 }
 .navbar ul {
     list-style-type: none; 
