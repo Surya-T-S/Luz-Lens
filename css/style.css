@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -70,6 +74,7 @@ html{
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: metallic-shine 5s linear infinite;
     transition: transform 0.3s ease;
@@ -143,11 +148,11 @@ html{
 }
 .carousel {
     position: relative;
-    width: 90%;
-    max-width: 1400px;
+    width: 80%;
+    max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 30px;
+    border-radius: 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     background-color: #000000;
     z-index: 2;
@@ -156,18 +161,18 @@ html{
 
 .carousel-images {
     display: flex;
-    transition: transform 1.2s cubic-bezier(0.645, 0.045, 0.355, 1);
-    will-change: transform;
+    transition: transform 0.8s ease;
     height: 100%;
+    background: #000;
+    will-change: transform;
 }
 
 .carousel-images img {
-    width: 100%;
     height: 100%;
+    flex: 0 0 100%;
     object-fit: contain;
-    flex-shrink: 0;
     transition: opacity 0.8s ease;
-    opacity: 0.85;
+    opacity: 0.8;
     background-color: #000000;
     padding: 10px;
 }
@@ -180,24 +185,25 @@ html{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     padding: 1rem;
     cursor: pointer;
     z-index: 10;
     border-radius: 50%;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
     backdrop-filter: blur(4px);
+    font-size: 1.2rem;
 }
 
 .carousel-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     transform: translateY(-50%) scale(1.1);
 }
 
@@ -254,9 +260,42 @@ html{
     background-color: #0f0b0b;
     min-height: 85vh;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 95%;
+        aspect-ratio: 4/3;
+        border-radius: 20px;
+    }
+
+    .carousel-button {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .carousel-images img {
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel {
+        width: 100%;
+        aspect-ratio: 1/1;
+        border-radius: 15px;
+    }
+
+    .carousel-button {
+        width: 30px;
+        height: 30px;
+        padding: 6px;
+    }
 }
 
 
@@ -690,6 +729,7 @@ footer.footer {
     letter-spacing: 2px;
     background: linear-gradient(90deg, #888, #fff, #888);
     background-size: 200% auto;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: metallic-shine 4s linear infinite;
