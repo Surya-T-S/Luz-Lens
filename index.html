@@ -43,14 +43,14 @@
         <div class="shooting-star"></div>
         <div class="shooting-star"></div>
         <div class="shooting-star"></div>
-        <div class="carousel">            
+        <div class="carousel">
             <div class="carousel-images">
-                <img src="images/img1.jpeg" alt="Image 1">
-                <img src="images/img2.jpeg" alt="Image 2">
-                <img src="images/img3.jpeg" alt="Image 3">
-                <img src="images/img4.jpeg" alt="Image 4">
-                <img src="images/img5.jpeg" alt="Image 5">
-                <img src="images/img6.webp" alt="Image 6">
+                <img src="WhatsApp Image 2025-06-02 at 3.24.12 PM.jpeg" alt="Image 1">
+                <img src="WhatsApp Image 2025-06-02 at 3.24.12 PM (1).jpeg" alt="Image 2">
+                <img src="WhatsApp Image 2025-06-02 at 3.24.12 PM (2).jpeg" alt="Image 3">
+                <img src="WhatsApp Image 2025-06-02 at 3.24.13 PM.jpeg" alt="Image 4">
+                <img src="WhatsApp Image 2025-06-02 at 3.24.13 PM (1).jpeg" alt="Image 5">
+                <img src="IMG_20241210_131328_405.webp" alt="Image 6">
             </div>
             <button class="carousel-button prev">&#10094;</button>
             <button class="carousel-button next">&#10095;</button>
@@ -58,7 +58,9 @@
         </div>
     </div>
      <div class="view-more">
+        <a href="gallery.html">
             <button>View Our Gallery</button>
+        </a> 
     </div>
 
     <div class="section-divider"></div>
@@ -69,7 +71,7 @@
             
             <div class="about-section-divider"></div>
             
-            <p>Founded in <strong>Government Engineering College, Thrissur</strong>, by a students with a passion for photography and storytelling, Luz & Lens is more than just pictures. It's a movement — showcasing raw, unfiltered perspectives and giving every photo a voice.</p>
+            <p>Founded in <strong>Government Engineering College, Thrissur</strong>, by a student with a passion for photography and storytelling, Luz & Lens is more than just pictures. It's a movement — showcasing raw, unfiltered perspectives and giving every photo a voice.</p>
             
             <div class="about-section-divider"></div>
             
@@ -120,7 +122,64 @@
             <p class="footer-credit">&copy; 2025 Luz & Lens. All rights reserved.</p>
         </div>
     </footer>
-    <script src="js/script.js"></script>    
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.carousel');
+            const carouselImages = carousel.querySelector('.carousel-images');
+            const images = carouselImages.querySelectorAll('img');
+            const prevButton = carousel.querySelector('.prev');
+            const nextButton = carousel.querySelector('.next');
+            const indicators = carousel.querySelector('.carousel-indicators');
+            
+            let currentIndex = 0;
+            const totalImages = images.length;
+
+            // Create indicator dots
+            images.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                if (index === 0) dot.classList.add('active');
+                dot.addEventListener('click', () => goToSlide(index));
+                indicators.appendChild(dot);
+            });
+
+            function updateCarousel() {
+                const offset = -currentIndex * carousel.offsetWidth;
+                carouselImages.style.transform = `translateX(${offset}px)`;
+                
+                // Update indicators
+                document.querySelectorAll('.carousel-dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
+
+            function goToSlide(index) {
+                currentIndex = index;
+                updateCarousel();
+            }
+
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % totalImages;
+                updateCarousel();
+            }
+
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+                updateCarousel();
+            }
+
+            // Event listeners
+            prevButton.addEventListener('click', prevSlide);
+            nextButton.addEventListener('click', nextSlide);
+
+            // Auto-advance carousel
+            setInterval(nextSlide, 5000);
+
+            // Initial update
+            updateCarousel();
+        });
+    </script>
 </body>
 
 </html>
