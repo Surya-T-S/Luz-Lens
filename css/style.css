@@ -113,7 +113,7 @@ html{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.15);
     color: white;
 }
 
@@ -169,7 +169,7 @@ html{
     background: #000;
     will-change: transform;
     transform: translateX(0);
-    transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .carousel-images img {
@@ -180,7 +180,7 @@ html{
     height: auto;
     object-fit: scale-down;
     transition: opacity 0.8s ease;
-    opacity: 0.8;
+    opacity: 1;
     background-color: #000000;
     padding: 0;
     margin: auto;
@@ -907,4 +907,67 @@ footer.footer {
 
 .upload-form button:hover::before {
     left: 100%;
+}
+
+.spinner {
+    display: block;
+    margin: 1.5rem auto;
+    width: 60px;
+    height: 60px;
+    border: 6px solid rgba(255,255,255,0.15);
+    border-top: 6px solid #ffb347;
+    border-right: 6px solid #ff5e62;
+    border-bottom: 6px solid #5ee7df;
+    border-left: 6px solid #b490ca;
+    border-radius: 50%;
+    animation: spin 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    box-shadow: 0 0 16px 2px rgba(255,255,255,0.12);
+    background: linear-gradient(135deg, rgba(255,255,255,0.03) 60%, rgba(255,255,255,0.08) 100%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.result {
+    margin: 2rem auto 0 auto;
+    padding: 1.7rem 2.2rem;
+    border-radius: 20px;
+    max-width: 500px;
+    font-size: 1.13rem;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.10), 0 6px 32px rgba(0,0,0,0.22);
+    background: #111;
+    border: 1.5px solid #fff;
+    text-align: center;
+    color: #fff;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(5px);
+}
+.result.success {
+    border-color: #fff;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 0 24px 0 #fff2;
+}
+.result.error {
+    border-color: #fff;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 0 24px 0 #fff2;
+}
+.result h3 {
+    margin-bottom: 0.7rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    color: #fff;
+}
+.result p {
+    margin: 0.4rem 0;
+    font-size: 1.12rem;
+    line-height: 1.6;
+    color: #fff;
 }

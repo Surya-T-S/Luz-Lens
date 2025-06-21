@@ -21,25 +21,9 @@ luz-and-lens/
 │   └── gallery.css    # Gallery-specific styles
 ├── js/
 │   ├── carousel.js    # Carousel functionality
+│   ├── form.js        # Upload form logic
 │   └── script.js      # General JavaScript functionality
-├── images/
-│   ├── img1.jpeg      # Image files
-│   ├── img2.jpeg
-│   ├── img3.jpeg
-│   ├── img4.jpeg
-│   ├── img5.jpeg
-│   ├── img6.webp
-│   ├── img7.jpg
-│   ├── img8.jpg
-│   ├── img9.jpg
-│   ├── img10.jpg
-│   ├── img11.jpg
-│   ├── img12.jpg
-│   ├── img13.jpg
-│   ├── img14.jpg
-│   ├── img15.jpg
-│   ├── img16.jpg
-│   └── img17.jpg
+├── images/            # Image files
 ├── index.html         # Main landing page
 ├── gallery.html       # Gallery page
 ├── README.md          # Project documentation
@@ -67,4 +51,15 @@ Follow us on Instagram: [@luz_and_lens](https://www.instagram.com/luz_and_lens?i
 
 ## License
 
-© 2025 Luz & Lens. All rights reserved.
+This work is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/).
+
+## Authors
+
+This project was created by:
+- Surya T S
+- Sooraj K R
+- Vrindha P
+
+## Copyright
+
+© 2025 Luz&Lens (Surya T S, Sooraj K R, and Vrindha P). All rights reserved.
