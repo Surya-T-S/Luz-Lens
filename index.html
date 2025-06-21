@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/form.js" defer></script>
 </head>
 
 <body>
@@ -86,7 +87,7 @@
     </div>
     <section class="upload-section" id="upload">
         <h1>Upload Your Work</h1>
-        <form class="upload-form">
+        <form class="upload-form" id="uploadForm" enctype="multipart/form-data">
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
 
@@ -96,8 +97,13 @@
             <label for="file">Upload File</label>
             <input type="file" id="file" name="file" accept="image/*,application/pdf" required>
 
-            <button type="submit">Submit Work</button>
+            <button type="submit" id="uploadButton">Submit Work</button>
         </form>
+        <button type="button" style="display:none" id="dummyBtn"></button> <!-- for keyboard nav -->
+        <img id="preview" style="display:none;max-width:100%;margin:1.2rem auto 0 auto;display:block;border-radius:12px;box-shadow:0 2px 16px #0004;" />
+        <div id="spinner" class="spinner" style="display:none;"></div>
+        <div id="result"></div>
+
     </section>
 
     <footer class="footer">
