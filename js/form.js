@@ -1,5 +1,5 @@
 // API URL for the Render deployment
-const API_URL = 'http://localhost:3000/upload';  // Use your backend URL here
+const API_URL = ' https://luz-and-lens-backend.onrender.com';  // Use your backend URL here
 
 // Image preview functionality
 document.getElementById('file').addEventListener('change', function (e) {
