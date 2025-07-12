@@ -244,7 +244,7 @@
   font-size: 0.8em;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  border: 1px solid rgba(255,255,255,0.13);
+  border: 1px solid rgba(255, 255, 255, 0.405);
   background: rgba(0,0,0,0.28);
   box-shadow: 0 2px 8px rgba(0,0,0,0.13);
   display: flex;
@@ -259,8 +259,9 @@
 
 .dot-matrix {
   display: flex;
-  gap: 2px;
+  gap: 4px;  /* Increased gap between digits */
   margin-bottom: 1px;
+  padding: 1px;  /* Added padding around the entire matrix */
 }
 
 .dot-digit {
@@ -274,20 +275,20 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff4444;
+  background: #ffffff92;
   opacity: 0.18;
   transition: opacity 0.2s;
-  box-shadow: 0 0 1.5px #ff4444;
+  box-shadow: 0 0 1.5px #818181;
 }
 
 .dot.on {
   opacity: 1;
-  background: #ff4444;
-  box-shadow: 0 0 3px #ff4444;
+  background: #ffffff;
+  box-shadow: 0 0 3px #ffffffd6;
 }
 
 .counter-label {
-  color: rgba(255,255,255,0.7);
+  color: rgb(255, 255, 255);
   font-size: 0.55rem;
   text-transform: uppercase;
   letter-spacing: 1px;

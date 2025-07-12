@@ -21,6 +21,11 @@
     <div class="shooting-star"></div>
     <nav class="navbar">
         <h1>Luz & Lens</h1>
+        <button class="menu-toggle" aria-label="Open navigation" tabindex="0">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </button>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#works">Our Works</a></li>
@@ -131,6 +136,21 @@
         </div>
     </footer>
     <script src="js/carousel.js"></script>
+    <script>
+    // Three-dot menu toggle for mobile nav
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navUl = document.querySelector('.navbar ul');
+    menuToggle.addEventListener('click', function() {
+        menuToggle.classList.toggle('open');
+        navUl.classList.toggle('open');
+    });
+    navUl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('open');
+            navUl.classList.remove('open');
+        });
+    });
+    </script>
 </body>
 
 </html>
