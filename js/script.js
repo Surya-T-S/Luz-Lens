@@ -133,12 +133,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     // Update dot-matrix on every load
     // Visitor counter logic: increment on first visit in session
+    
+    /*
     let visitorCount = parseInt(localStorage.getItem('visitorCount') || '0');
     if (!sessionStorage.getItem('visitedLuzLensGallery')) {
       visitorCount++;
       localStorage.setItem('visitorCount', visitorCount);
       sessionStorage.setItem('visitedLuzLensGallery', '1');
     }
+    */
+    
+    // Fixed visitor count for demo
+    const visitorCount = 224;
     renderDotMatrixVisitorCount(visitorCount);
 
     // Like functionality

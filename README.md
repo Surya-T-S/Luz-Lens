@@ -17,17 +17,17 @@ Where light meets artistry—Luz & Lens is a curated sanctuary for visual storyt
 ```
 luz-and-lens/
 ├── css/
-│   ├── style.css      # Main stylesheet
-│   └── gallery.css    # Gallery-specific styles
+│   ├── style.css      # Main stylesheet with responsive design
+│   └── gallery.css    # Gallery-specific styles and grid layout
 ├── js/
-│   ├── carousel.js    # Carousel functionality
-│   ├── form.js        # Upload form logic
-│   └── script.js      # General JavaScript functionality
-├── images/            # Image files
-├── index.html         # Main landing page
-├── gallery.html       # Gallery page
-├── README.md          # Project documentation
-└── .gitignore         # Git ignore configuration
+│   ├── carousel.js    # Image carousel with smooth transitions
+│   ├── form.js        # Image upload form validation and handling
+│   └── script.js      # Navigation, animations, and core functionality
+├── images/           # Photography collection (.jpg, .jpeg, .webp)
+├── index.html        # Main landing page with carousel and animations
+├── gallery.html      # Photography gallery with grid layout
+├── README.md         # Project documentation and setup guide
+└── LICENSE          # Creative Commons License file
 ```
 
 ## Getting Started
